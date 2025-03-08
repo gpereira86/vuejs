@@ -7,18 +7,45 @@
     </div>
 </template>
 
-<script setup>
 
-import {reactive} from "vue"
+<!-- <script setup>
 
-const pessoa = reactive({nome:"Ana",idade: 27})
+    import {reactive} from "vue"
 
-function fazerAniversario(){
-    pessoa.idade += 1
-}
+    const pessoa = reactive({nome:"Ana",idade: 27})
 
-function mudarNome(){
-    pessoa.nome = "Ana Maria"
+    function fazerAniversario(){
+        pessoa.idade += 1
+    }
+
+    function mudarNome(){
+        pessoa.nome = "Ana Maria"
+    }
+
+</script> -->
+
+
+
+<!-- Usando opetions API -->
+<script>
+export default{
+    data: function(){
+        return{
+            pessoa:{
+                nome:"Ana",
+                idade:27
+            }
+        }
+    },
+    methods:{
+        fazerAniversario: function(){
+            this.pessoa.idade += 1
+        },
+        mudarNome: function(){
+            this.pessoa.nome = "Ana Maria"
+        }
+    }
+
 }
 
 </script>
