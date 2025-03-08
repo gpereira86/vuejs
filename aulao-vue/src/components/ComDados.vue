@@ -1,7 +1,7 @@
 <template>
     <div>
         <h1>Componente com dados</h1>
-        <p>Nome: caneta - #123</p>
+        <p>Nome: {{ nomeProduto }} - {{ codigoProduto }}</p>
     </div>
 </template>
 
@@ -12,15 +12,37 @@
         background-color: #050d04;
         border-radius: 15px;
         margin: 30px;
-        padding: 10px;
+        padding: 10px;        
+    }
+
+    p{
+        font-size: 1.5rem;
     }
 </style>
 
-<script>
-// options API -> sempre usar function, nunca arrow
-export default{
-    data: function(){
-        return{}
-    }
-}
+
+<!-- //composition API -> Forma mais comum  -->
+<script setup>
+        const nomeProduto = "Apontador"
+        const codigoProduto = "#987"              
 </script>
+
+<!--<script>
+// // options API -> sempre usar function, nunca arrow
+// export default{
+//     data: function(){
+//         return{
+//             nomeProduto: "Caderno",
+//             codigoProduto: "#321"   
+//         }
+//     }
+// }
+// //composition API -> A forma abaixo não é comumente usada, mas existe e funciona
+// export default{
+//     setup: function() {
+//         const nomeProduto = "Lapis";
+//         const codigoProduto = "#789" 
+//         return {nomeProduto, codigoProduto}               
+//     }
+// }
+</script>-->
