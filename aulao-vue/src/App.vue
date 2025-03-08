@@ -5,11 +5,20 @@ import ComDadosReativosPrimitivos from "./components/ComDadosReativosPrimitivos.
 import ComDadosReativosNaoPrimitivos from "./components/ComDadosReativosNaoPrimitivos.vue";
 import DataBinding from "./components/DataBinding.vue";
 import ComProps from "./components/ComProps.vue";
+import EscutaEvento from "./components/EscutaEvento.vue";
+import PropriedadesComputadas from "./components/PropriedadesComputadas.vue";
+import PropriedadesAssistidas from "./components/PropriedadesAssistidas.vue";
+
+const borracha = "Borracha"
+const precoBorracha = 2.50
 </script>
 
 <template>
   <header>Vue</header>
-  <ComProps/>
+  <PropriedadesAssistidas/>
+  <PropriedadesComputadas/>
+  <EscutaEvento/>
+  <ComProps v-bind:item="borracha" v-bind:preco="precoBorracha"/>
   <DataBinding/>
   <ComDadosReativosNaoPrimitivos/>
   <ComDadosReativosPrimitivos/>
